@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Submit a Plant</title>
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <div>
@@ -16,10 +17,11 @@
           <a href="submit.html">Submit a Plant</a>
         </nav>
       </header>
+      <div id="feedback"></div>
       <main>
         <section class="landing-page3">
             <h1>Submit a Plant</h1>
-            <p>So glad you found us! If you have more questions about your plant or would like to see more plants added to the gallery, feel free to contact us and see your little sprout on the screen. We love recommendations, comments, questions and learning so don’t be afraid to spread your knowledge.</p>
+            <p>So glad you found us! If you have more questions about your plant or would like to see more plants added to the gallery, feel free to contact us and see your little sprout on the screen. We love recommendations, comments, questions and learning so don’t be afraid to spread your knowledge. Just send a plant recommendation and we will do the rest!</p>
         </section>
         <section class="input">
             <form action="/my-handling-form-page" method="post">
@@ -29,24 +31,22 @@
               </p>
               <p>
                 <label for="description">Brief Description of Plant:</label>
-                <input type="text" id="description" name="plant_details">
+                <textarea id="description" name="plant_details"></textarea>
               </p>
-              <p class="send-button">
-                <button type="submit">Submit!</button>
-              </p>
+              <button class="send-button">
+                <a href="submit.html">Submit!</a></button>  <!--change link-->
             </form>
             <div>
-                <img src="images/black-ceramic-plant-pot-with-saucer_53876-176846.jpg" alt="Image of empty plant pot"
+                <img src="images/black-ceramic-plant-pot-with-saucer_53876-176846.jpg" alt="Image of empty plant pot">
             </div>
         </section>
-        <div>
-            <img src="images/beautiful-various-leaves_23-2150114712.jpg" alt="image of assorted leaves upright"
+        <div class="closing">
+            <img src="images/beautiful-various-leaves_23-2150114712.jpg" alt="image of assorted leaves upright">
         </div>
       </main>
       <footer>
-        <p>RootoftheProblem</p>
         <p>
-          <a href="site-plan.html">Site Plan</a>
+          <a href="site-plan.html">RootoftheProblem-SitePlan</a>
         </p>
         <!-- <div class="social-links">
           <a href="https://facebook.com" target="_blank"></a>
@@ -55,5 +55,22 @@
         </div> -->
       </footer>
     </div>
+    <script>
+      // get the feedback div element so we can do something with it.
+      const feedbackElement = document.getElementById('feedback');
+      // get the form so we can read what was entered in it.
+      const formElement = document.forms[0];
+      // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+      formElement.addEventListener('submit', function(e) {
+          // stop the form from doing the default action.
+          e.preventDefault();
+          // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+          feedbackElement.innerHTML = 'Your feedback has been received, thank you!';
+          // make the feedback element visible.
+          feedbackElement.style.display = "block";
+          // add a class to move everything down so our message doesn't cover it.
+          document.body.classList.toggle('moveDown');
+      });
+  </script>
   </body>
 </html>
