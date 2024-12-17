@@ -56,8 +56,8 @@ button {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    margin-top: 75px;
-    margin-bottom: 100px;
+    margin-top: 30px;
+    margin-bottom: 128px;
 }
 
 .redirect-buttons a {
@@ -151,25 +151,27 @@ footer a:hover {
 .gallery h3 {
     text-align: center;
     font-family: 'DM Serif Display';
-
+    margin-bottom: 4px;
 }
 
 .gallery h4 {
     text-align: center;
     font-family: 'DM Serif Display';
-
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .gallery h5 {
     text-align: center;
     font-family: 'DM Serif Display';
-
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .gallery p {
     text-align: center;
     font-family: 'PT Serif Caption';
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 10%;
     margin-right: 5%;
 }
@@ -177,7 +179,7 @@ footer a:hover {
 .gallery ul {
     text-align: center;
     font-family: 'PT Serif Caption';
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 10%;
     margin-right: 5%;
 }
@@ -187,8 +189,6 @@ footer a:hover {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     justify-content: center;
-    align-items: center;
-
 }
 
 .landing-page3 h1 {
